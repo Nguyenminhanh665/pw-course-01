@@ -1,0 +1,126 @@
+I. Git
+1. Undo actions
+- Xem lịch sử commit: git log
+- Thay đổi commit message (2 cách)
+* Cách 1: 
+git commit --amend
+gõ i -> vào chế độ insert
+gõ ESC -> thoát insert
+gõ ":wq" -> write and quit
+* Cách 2: git commit --amend -m"message"
+- Đưa từ vùng Staging về vùng Working Directory: git restore --staged <file>
+- Đưa từ vùng Repository về vùng Working Directory: git reset HEAD~1 (tương tự với 2, 3, ..., n commit => HEAD~n)
+2. Branching model
+Dùng branch để tạo ra một vùng làm việc mới, không ảnh hưởng tới vùng làm việc đã ổn định.
+- Khi không có branch: sẽ backup file ra chỗ khác, copy lại
+- Khi tạo branch:
+git branch <ten_branch>
+git checkout <ten_branch>
+*hoặc*
+git checkout -b <ten_branch> -> gộp 2 lệnh trên thành 1
+- Tips: luôn tạo branch mới trước khi thực hiện một lệnh copy từ insert.
+3. GitIgnore (.gitignore)
+Dùng để bỏ qua các file không cần theo dõi
+- Ignore file : <file_name>
+- Ignore folder: <folder_name>/
+II. Javascript
+* Conventions
+snake_case: chưa dùng (snake_case_now_now)
+kebab-case: tên file (kebab-case-now-now)
+camelCase: tên biến (camelCaseNowNow)
+PascalCase: tên class (PascalCaseNowNow)
+* Formatted console.log (có thể sử dụng '', "" or ``)
+- console.log('Toi la Anh');
+- console.log("Toi la Nga");
+- console.loglog(`${variable_name}`);
+Cộng chuỗi (2 cách)
+- console.log(`Toi la ${name}`);
+or
+- console.log("Toi ten la" + name + "");
+1. Object
+Dùng để lưu trữ tập hợp các giá tri vào cùng một biến hoặc hàng số
+a. Khai báo
+let/const <ten_bien> = {
+    <thuoc_tinh>: <gia_tri>,
+    ...
+}
+* Trong đó:
+- <thuoc_tinh>: giống quy tắc đặt tên biến
+- <gia tri>: có kiểu giống biến, hoặc là object khác
+* Ví dụ: 
+const student = {
+    name: "Phong",
+    age: 10,
+    isLoveComputer: true,
+    money: 100.5
+    "local adress": "Ha Noi" 
+};
+console.log(student.name);
+console.log(student["name"]);
+console.log(student["local adress"]);
+* Note: Khi khai báo object bằng const thì không thể gán lại 1 object đã có bằng 1 object mới mà thay vào đó ta sẽ gán lại từng thuộc tính trong object ban đầu rồi consolo.log lạilại
+2. Logical operator
+- &&: cả 2 vế của mệnh đề đều đúng
+- ||: một trong 2 vế đúng
+- !: đaor ngược lại giá trị của mệnh đề
+a. Ví dụ với &&
+Xếp hạng điểm
+>= 9 => gioi
+>= 7.0 -> 9 => kha
+>= 5.0 -> 7 => trung binh
+< 5 => kem
+const diemSo = 8;
+if (diemSo >= 9) {
+    console.log("Gioi");
+}
+if (diemSo >= 7.0 && diemSo < 9) {
+    console.log("Kha");
+}
+if (diemSo >= 5  && diemSo < 7) {
+    console.log("Trung binh");
+}
+b. Ví dụ với ||
+Xét điểm đại học: cộng 2 điểm => Gia đình có công || vùng núi
+const student22 {
+    giaDinhCoCong: true,
+    vungNuiKhoKhan: false
+};
+if (student2.giaDinhCoCong || student2.vungNuiKhoKhan) {
+    console.log("Cộng 2 điểm");
+}
+3. Array: Mảng
+* Ví dụ:
+- Khai báo: const arr11 = [8, 2, 3, 5, 7, 66];
+- Sử dụng: 
+console.log(arr1[1]);
+console.log(arr1[array.length - 1]);
+* Trong đó
+- length: độ dài mảng
+- lấy phần tử theo index: [0], [1], [2]
+4. Function
+- Khai báo: 
+  fuction <nameFunction>() {
+        // code
+  }
+- Parameter
+- Return value 
+* Ví dụ Return value
+function kiemTraDiemSo(diemSo) {
+    if (diemSo >= 9) {
+        return "Gioi";
+    }
+    if (diemSo >= 7.0 && diemSo < 9) {
+        return "Kha";
+    }
+    if (diemSo >= 5  && diemSo < 7) {
+        return "Trung binh";
+    }
+    if (diemSo < 5) {
+        return "Kem";
+    }
+}
+
+const result = kiemTraDiemSo(10);
+console.log(result);
+
+
