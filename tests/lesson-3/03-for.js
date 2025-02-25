@@ -22,9 +22,9 @@ let arr22 = []
 for (let i = 1; i <= 99; i += 2) {
     console.log(arr.push(i));
 }
-4.
 console.log("Mảng số lẻ từ 1 đến 99 là: ", arr);
 //
+4.
 for (let i = 1; i <= 10; i++) {
     console.log(`user-${i}@gmail.com`);
 }

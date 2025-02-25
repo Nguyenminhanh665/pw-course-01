@@ -203,6 +203,7 @@ function updateEmail(name, newEmail) {
             return;
         }
     }
+    console.log(`${name} không có trong danh sách người sử dụng`);
 }
 updateEmail("Tuan", "tuantrannew@email.com");
 updateEmail("Alice", "alice62new@email.com"); 
