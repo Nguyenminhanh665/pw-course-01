@@ -1,0 +1,144 @@
+1. Phạm vi của biến var và let
+* Biến var: là biến global (biến toàn cục) và có thể được dùng cho toàn bộ file có var được khai báo.
+VD: 
+for (varvar i = 0; i < 5; i++) {
+    console.log(i);
+}
+console.log(i); 
+// Output
+1
+2
+3
+4
+5
+*Biến let: là biến có phạm vi khối (scope: {}), sẽ không thể truy cập lại nếu không được khai báo trong những lần tiếp theo.
+VD:
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+console.log(i); //Output: i isn't not definied 
+2. Điều kiện nâng cao
+*Note: Phân biệt if...else/ if...else if...else/ switch...case... default
+- if..else: dùng để kiểm tra 1 điều kiện duy nhất, nêú đúng (true) thì chạy 1 đoạn code còn nếu sai (false) thì chạy một đoạn code khác.
+- if...elsse if...else: dùng để kiểm tra lần lượt nhiều điều kiện, nếu có điều kiện đúng thì đoạn code tướng ứng và các đkien còn lại sẽ bỏ qua
+- switch..case default: dùng để so sánh 1 giá trị với nhiều trường hợp cụ thể
+a. If...else
+- Cú pháp:
+ if (condition) {
+    // code run if condition = true
+ } else {
+    // code run if condition = false
+ }
+b, If...else if...else
+- Cú pháp:
+if (condition) {
+    // code run if condition = true
+ } else if (conondition 1) {
+    // code run if condition 1 = true
+ } else if (condition 2) {
+    // code run if condition 2 = true
+ } else {
+    // all condition before = false
+ }
+ c. Switch...case
+ - Cú pháp:
+ switch (bieu_thuc) {
+    case value_1:
+      // run code
+      break;
+    case value_2:
+      // run code
+      break;
+    case value_3:
+      // run code
+      break;
+    case value_4:
+      // run code
+      break;
+    default:
+      // run code    
+ }
+3. Toán tử so sánh (== và !=)
+- Khác với === và !== là so sánh tuyệt đối về cả giá trị và định dạng thì == và != có phần lỏng lẻo hơn khi chỉ so sánh về giá trị
+- VD:
+const result1 = "5" == 5; 
+const result2 = "5" === 5; 
+
+console.log(result1); //Output: true
+console.log(result2); //Output: false
+
+const result3 = "5" != 5;
+console.log(result3); //Output: true
+4. Advenced loops (for...in/ forEach/ for..of/ break và continue)
+a. For...in: dùng để lặp các thuộc tính (keys) của 1 object đã cho (không dùng vòng lặp này với Array)
+- Cú pháp:
+for (let key in object) {
+    // code
+}
+- VD:
+let product = {
+    "Banana": 20,
+    "Apple": 15,
+    "Orange": 30
+}
+for (let property in product) {
+    console.log(property);
+}
+// Output:
+Banana
+Apple
+Orange
+b. ForEach: dùng để lặp từng phần tử trong Array (ko dùng với Object)
+- Cú pháp:
+const arr = [];
+arr.forEach ({value, index} => {
+    // code
+})
+- VD:
+const fruits = ["Banana", "Apple", "Orange"]
+fruits.forEach ({value, index} => {
+    console.log(value);
+    console.log(`Qua ${value} nam o vi tri ${index});
+})
+// Output
+Banana
+Qua Banana nam o vi tri 0
+...
+Qua Orange nam o vi tri 2
+c. For...of: dùng để lặp từng phần tử trong Array (ko dùng với Object)
+- Cú pháp:
+for (let value of arr) {
+    // code
+}
+- VD:
+const fruits = ["Banana", "Apple", "Orange"]
+for (let fruit in fruits) {
+    console.log(fruit);
+}
+// Output:
+Banana
+Apple
+Orange
+e. Continue: bỏ qua vòng lặp hiện tại và chuyển đến vòng lặp tiếp theo
+for (let i - 0, i < 5, i++) {
+    if (i % 2 === 0) {
+        continue;
+    }
+    console.log(i);
+}
+// Output: 1 3 5
+f. Break: thoát khỏi vòng lặp ngay lập tức, ko thực hiện các vòng lặp tiếp theo
+let arr = [11, 22, 55];
+for (let i = 0, i < arr.length, i++) {
+    if ( arr[i] % 2 === 0) {
+        break;
+    }
+    console,log(i);
+}
+// Output: 11
+
+
+
+
+
+
