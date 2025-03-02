@@ -17,3 +17,19 @@ for(let num of number2) {
         console.log(num);
     }
 }
+
+2.//Tạo mảng chứa các ký tự nghịch đảo từ 1 chuỗi đã cho
+const string = "Google";
+let newString = [];
+for(let char of string) {
+    newString.unshift(char);
+}
+console.log(newString);
+
+// Cách 2
+let str1 = "Playwright";
+let mangNghichDao = [];
+for(let i = str1.length - 1; i >= 0; i--) {
+    mangNghichDao.push[i];
+}
+console.log(mangNghichDao);

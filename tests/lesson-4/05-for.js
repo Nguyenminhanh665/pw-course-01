@@ -13,11 +13,9 @@ let sum = 0;
 for(let property in product) {
     if(typeof product[property] === "number" ) {
         sum += product[property];
-    } else {
-        continue;
     }
 }
-console.log(sum);
+console.log('sum: ', sum);
 3.// Tạo 1 mảng chứa tất cả các thuộc tính của một đối tượng
 const student = {"name": "Anhh", "school": "AOF"};
 const newStudent = [];
