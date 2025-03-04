@@ -23,11 +23,5 @@ for(let information in student) {
     newStudent.push(information);
 }
 console.log(newStudent);
-4.//Tạo mảng chứa các ký tự nghịch đảo từ 1 chuỗi đã cho
-const string = "Google";
-let newString = [];
-for(let char of string) {
-    newString.unshift(char);
-}
-console.log(newString);
+
 

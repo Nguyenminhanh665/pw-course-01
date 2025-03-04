@@ -10,6 +10,34 @@ for (let value of arr1) {
         console.log(`Số ${value} có số đứng trước là ${j} và số đứng sau là ${k}`);
     }
 }
+//BÀI CHỮA
+const arr = [1, 1, 3, 4, 3, 55, 23];
+
+let firstIndex = -1;
+let lastIndex = -1;
+let count = 0
+let target = 55;
+
+for (let i of arr) {
+    if(i === target) {
+        if(firstIndex === -1) {
+            firstIndex = count;
+        }
+        lastIndex = count;
+    }
+    count++;
+}
+
+if(firstIndex === -1 && lastIndex === -1) {
+    console.log(`So ${target} khong ton tai trong mang`);
+} else {
+    console.log(`firstIndex: ${firstIndex} - lastIndex: ${lastIndex}`);
+}
+
+
+
+
+
 3.// Lọc ra tất cả các phần tử chỉ xuất hiện một lần trong một mảng.
 const number2 = [3, 4, 6, 4, 8, 3];
 for(let num of number2) {
