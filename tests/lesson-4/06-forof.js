@@ -1,22 +1,11 @@
-1.// Tìm và in ra vị trí phần tử đầu tiên và cuối cùng trong một mảng bằng với giá trị cho trước.
-const arr1 = [5, 6, 3, 55, 25]; 
-for (let value of arr1) {
-    let index = arr1.indexOf(value); 
-    let j = arr1[index - 1] ;
-    let k = arr1[index + 1];
-    if (value === 5 && value === 25) {
-        continue;
-    } else {
-        console.log(`Số ${value} có số đứng trước là ${j} và số đứng sau là ${k}`);
-    }
-}
+
 //BÀI CHỮA
 const arr = [1, 1, 3, 4, 3, 55, 23];
 
 let firstIndex = -1;
 let lastIndex = -1;
 let count = 0
-let target = 55;
+let target = 23;
 
 for (let i of arr) {
     if(i === target) {
